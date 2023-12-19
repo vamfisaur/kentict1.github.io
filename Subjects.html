@@ -63,14 +63,14 @@
         }
 
         .details {
-            display: none;
+            max-height: 0;
+            overflow: hidden;
             margin-top: 10px;
             padding: 10px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 4px;
-            transition: max-height 0.3s ease;
-            overflow: hidden;
+            transition: max-height 0.5s ease;
         }
 
         .show-details {
@@ -99,7 +99,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="categories.html">ICT</a></li>
             <li><a href="About.html" class="button-link">About</a></li>
-           
         </ul>
     </nav>
 
@@ -121,10 +120,10 @@
     <script>
         function toggleDetails(detailsId) {
             var details = document.getElementById(detailsId);
-            if (details.style.display === 'none' || details.style.display === '') {
-                details.style.display = 'block';
+            if (details.style.maxHeight === '0px' || details.style.maxHeight === '') {
+                details.style.maxHeight = details.scrollHeight + 'px';
             } else {
-                details.style.display = 'none';
+                details.style.maxHeight = '0';
             }
         }
     </script>
