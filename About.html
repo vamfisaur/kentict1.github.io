@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AbouT US</title>
+    <title>About US</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,14 +63,14 @@
         }
 
         .details {
-            display: none;
+            max-height: 0;
+            overflow: hidden;
             margin-top: 10px;
             padding: 10px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 4px;
-            transition: max-height 0.3s ease;
-            overflow: hidden;
+            transition: max-height 0.5s ease;
         }
 
         .show-details {
@@ -99,14 +99,13 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Subjects.html">ICT</a></li>
             <li><a href="About.html" class="button-link">About</a></li>
-            
         </ul>
     </nav>
 
     <main>
         <article>
             <h2>ICT</h2>
-            <p>I'm Kent rv A. Crisostomo , I'm a shs graduate at CITI GLOBAL COLLEGE my strand is Information communications Technologies</p>
+            <p>I'm Kent rv A. Crisostomo, I'm a SHS graduate at CITI GLOBAL COLLEGE, my strand is Information Communications Technologies</p>
             <div class="details" id="details1">
                 <p>I've got interested in technology. I choose ICT because I want to improve my knowledge and learn new skills about technology. It opens my eyes because the world is filled with technology; everything runs on technology now and it's getting into the future.</p>
             </div>
@@ -121,10 +120,10 @@
     <script>
         function toggleDetails(detailsId) {
             var details = document.getElementById(detailsId);
-            if (details.style.display === 'none' || details.style.display === '') {
-                details.style.display = 'block';
+            if (details.style.maxHeight === '0px' || details.style.maxHeight === '') {
+                details.style.maxHeight = details.scrollHeight + 'px';
             } else {
-                details.style.display = 'none';
+                details.style.maxHeight = '0';
             }
         }
     </script>
