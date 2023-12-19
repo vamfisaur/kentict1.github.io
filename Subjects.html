@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ICT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #333;
+            background-color: #eee;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        article {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        .show-details {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .show-details:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>INFORMATION ABOUT ICT</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">ICT</a></li>
+            <li><a href="about.html" class="button-link">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>ICT</h2>
+            <p>ICTs are also used to refer to the convergence of media technology such as audio-visual and telephone networks with computer networks, by means of a unified system of cabling (including signal distribution and management) or link system. However, there is no universally accepted definition of ICTs considering that the concepts, methods and tools involved in ICTs are steadily evolving on an almost daily basis.</p>
+            <div class="details" id="details1">
+                <p>By using ICTs, there have already “been diverse types of innovations taking place in the agriculture sector, which include commodity and stock market price information and analysis, meteorological data collection, advisory services to farmers for agricultural extension, early warning systems for disaster prevention and control, financial services, traceability of agricultural products, agricultural statistical data gathering, etc."</p>
+            </div>
+            <span class="show-details" onclick="toggleDetails('details1')">Read more</span>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; KENT RV A. CRISOSTOMO 11-ICT 1 EMTECH </p>
+    </footer>
+
+    <script>
+        function toggleDetails(detailsId) {
+            var details = document.getElementById(detailsId);
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
